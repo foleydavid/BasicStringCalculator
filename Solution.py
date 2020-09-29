@@ -9,7 +9,6 @@ class Solution(object):
         #initialize string format
         s = "(" + s + ")"
         s = s.replace(" ","")
-        print(s)
         
         #until no more ")" left
         while s.find(")") != -1:
@@ -19,7 +18,6 @@ class Solution(object):
             #simplify specific part and exchange part of string for ans
             s = s[0:ind_1] + Solution.simplifyPart(s[ind_1:ind_2+1]) + s[ind_2 + 1:]
             s = s.replace("--","+")
-            print(s)
         
         return int(s)
     
